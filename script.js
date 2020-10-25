@@ -23,4 +23,18 @@ $(document).ready(function () {
   }
 
   hourClock();
+
+  var timeUpdate = setInterval(hourClock, 15000);
+
+  $("#hour-9 .saveText").val(localStorage.getItem("hour-9"));
+  $("#hour-10 .saveText").val(localStorage.getItem("hour-10"));
+  $("#hour-11 .saveText").val(localStorage.getItem("hour-11"));
+  $("#hour-12 .saveText").val(localStorage.getItem("hour-12"));
+  $("#hour-13 .saveText").val(localStorage.getItem("hour-13"));
+  $("#hour-14 .saveText").val(localStorage.getItem("hour-14"));
+  $("#hour-15 .saveText").val(localStorage.getItem("hour-15"));
+  $("#hour-16 .saveText").val(localStorage.getItem("hour-16"));
+  $("#hour-17 .saveText").val(localStorage.getItem("hour-17"));
+
+  $("#currentDay").text(moment().format("LLL"));
 });
